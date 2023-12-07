@@ -32,10 +32,10 @@
                 <div class="thumbs">
                     <button class="prev" @click="prevSlide()"></button>
                     <button class="next" @click="nextSlide()" ></button>
-                    <div class="thumb active">
-                        <img src="img/01.webp" alt="Svezia" />
+                    <div class="thumb" v-for = "(imageSRC, index) in imagesArray" :class="(index === activeIndex) ? 'active' : ''">
+                        <img :src="imageSRC" alt="Thumbnails" />
                     </div>
-                    <div class="thumb">
+                    <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
                     </div>
                     <div class="thumb">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="thumb">
                         <img src="img/05.webp" alt="Avengers" />
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
