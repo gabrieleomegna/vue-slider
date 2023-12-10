@@ -33,7 +33,7 @@
                     <button class="prev" @click="prevSlide()"></button>
                     <button class="next" @click="nextSlide()" ></button>
                     <div class="thumb" v-for = "(imageSRC, index) in imagesArray" :class="(index === activeIndex) ? 'active' : ''">
-                        <img :src="imageSRC" alt="Thumbnails" />
+                        <img :src="imageSRC" alt="Thumbnails" @click = "changeSlide(index)"/>
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />

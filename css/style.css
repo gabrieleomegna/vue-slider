@@ -49,6 +49,10 @@
     height: 100%;
     object-fit: cover;
 }
+.thumb:hover {
+    border: 1px solid #ccc;
+    opacity: 1;
+}
 
 .thumb.active {
     border: 2px solid #ccc;

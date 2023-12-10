@@ -24,6 +24,12 @@ createApp({
             if (index < 0) {
                 this.activeIndex = this.imagesArray.length - 1;
             }
+        },
+        changeSlide (index) {
+            if (index >= this.imagesArray.length || index < 0) {
+                return false
+            }
+            this.activeIndex = index;
         }
     }
 }).mount('#app');
